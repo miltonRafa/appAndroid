@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout principal usando ConstraintLayout -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,6 +9,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Logo do aplicativo -->
     <ImageView
         android:id="@+id/logo_android"
         android:layout_width="wrap_content"
@@ -17,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Texto de boas-vindas -->
     <TextView
         android:id="@+id/text_view"
         android:layout_width="0dp"
@@ -28,7 +31,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp" />
 
-    <!-- Campo de E-mail -->
+    <!-- Campo de entrada para E-mail -->
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
@@ -42,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view"/>
 
-    <!-- Campo de Senha -->
+    <!-- Campo de entrada para Senha -->
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="match_parent"
@@ -56,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text"/>
 
-    <!-- Botão -->
+    <!-- Botão de ação -->
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
