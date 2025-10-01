@@ -1,8 +1,7 @@
 package com.rafael.firstapplication_2
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,13 +26,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // val button = findViewById<Button>(R.id.button)
-        // val editText = findViewById<EditText>(R.id.edit_text)
-        val editText = binding.editText
+        // Acessando os componentes via binding
+        val editTextEmail = binding.editText
+        val editTextPassword = binding.editTextPassword
         val button = binding.button
 
-        button.setOnClickListener { view ->
-            println(editText.text)
+        button.setOnClickListener {
+            val email = editTextEmail.text.toString()
+            val senha = editTextPassword.text.toString()
+
+            val mensagem = "Email: $email\nSenha: $senha"
+            Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show()
         }
     }
 }
